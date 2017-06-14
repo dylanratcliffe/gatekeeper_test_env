@@ -1,0 +1,1 @@
+[{"path":"/etc/fuckyeah","ensure":"file","owner":"root","content":"This absolutely must not change"}]
