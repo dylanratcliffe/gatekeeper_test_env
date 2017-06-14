@@ -1,5 +1,5 @@
 class profile::override {
-  file <| title == '/etc/fuckyeah' |> {
+  File <| title == '/etc/fuckyeah' |> {
     content => 'I have no respect for the rules 🍻',
   }
 }
