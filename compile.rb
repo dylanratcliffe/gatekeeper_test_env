@@ -4,7 +4,7 @@ require 'json'
 class SOE
   include RSpec::Puppet::Support
 
-  attr_accessor :code, :node_name, :facts, :hiera_config
+  attr_accessor :code, :node_name, :facts, :hiera_config, :environment
 
   def adapter
     @adapter ||= begin
@@ -16,10 +16,6 @@ class SOE
     end
   end
 
-  def environment
-    'test'
-  end
-
   def build
     build_catalog_without_cache(node_name, facts, hiera_config, code, nil)
   end
@@ -29,4 +25,5 @@ s = SOE.new
 s.code = File.read('site/profile/manifests/base.pp') + "\ninclude profile::base"
 s.node_name = 'test'
 s.facts = {}
-puts JSON.generate(s.build.resources.reject { |r| ['Class', 'Stage'].include?(r.type) }.map { |r| r.to_hash })
+s.environment = 'test'
+puts JSON.generate(s.build.resources.reject { |r| ['Class', 'Stage'].include?(r.type) }.map { |r| r.to_hash.merge(:type => r.type.downcase) })
