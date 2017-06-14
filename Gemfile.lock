@@ -1,3 +1,34 @@
+GIT
+  remote: https://github.com/dylanratcliffe/onceover-gatekeeper.git
+  revision: 0855106e397a9c92ddaf1dd05617e4388e7b8ad7
+  specs:
+    onceover-gatekeeper (0.0.1)
+      onceover (>= 3.2.0)
+
+GIT
+  remote: https://github.com/dylanratcliffe/onceover.git
+  revision: 0c9d7d07cf7e7a8bcf4bf97ffb02b7a3bf0c1346
+  branch: improve_plugin_support
+  specs:
+    onceover (3.2.0)
+      colored (~> 1.2)
+      cri (>= 2.6)
+      deep_merge (>= 1.0.0)
+      git
+      json (>= 1.8.2)
+      logging (>= 2.0.0)
+      parallel_tests (>= 2.0.0)
+      puppet (>= 3.4.0)
+      puppetlabs_spec_helper (>= 0.4.0)
+      r10k (>= 2.1.0)
+      rake (>= 10.0.0)
+      rspec (>= 3.0.0)
+      rspec-puppet (>= 2.4.0)
+      rspec-puppet-utils (>= 2.0.0)
+      rspec_junit_formatter (>= 0.2.0)
+      table_print (>= 1.0.0)
+      versionomy (>= 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,24 +74,6 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.12.1)
     multipart-post (2.0.0)
-    onceover (3.2.0)
-      colored (~> 1.2)
-      cri (>= 2.6)
-      deep_merge (>= 1.0.0)
-      git
-      json (>= 1.8.2)
-      logging (>= 2.0.0)
-      parallel_tests (>= 2.0.0)
-      puppet (>= 3.4.0)
-      puppetlabs_spec_helper (>= 0.4.0)
-      r10k (>= 2.1.0)
-      rake (>= 10.0.0)
-      rspec (>= 3.0.0)
-      rspec-puppet (>= 2.4.0)
-      rspec-puppet-utils (>= 2.0.0)
-      rspec_junit_formatter (>= 0.2.0)
-      table_print (>= 1.0.0)
-      versionomy (>= 0.5.0)
     parallel (1.11.2)
     parallel_tests (2.14.1)
       parallel
@@ -144,7 +157,8 @@ PLATFORMS
   x86_64-darwin-15
 
 DEPENDENCIES
-  onceover
+  onceover!
+  onceover-gatekeeper!
   pry
   pry-byebug
   puppet

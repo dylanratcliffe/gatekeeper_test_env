@@ -5,6 +5,7 @@ group :development do
   gem 'pry-byebug'
 end
 
-gem 'onceover'
+gem 'onceover', git: 'https://github.com/dylanratcliffe/onceover.git', branch: 'improve_plugin_support'
+gem 'onceover-gatekeeper', git: 'https://github.com/dylanratcliffe/onceover-gatekeeper.git'
 
 gem 'puppet'
