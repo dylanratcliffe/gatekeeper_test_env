@@ -1,13 +1,13 @@
 GIT
   remote: https://github.com/dylanratcliffe/onceover-gatekeeper.git
-  revision: 0855106e397a9c92ddaf1dd05617e4388e7b8ad7
+  revision: fc05888f411c9bccf1c4b814266e4b3992fd04e3
   specs:
     onceover-gatekeeper (0.0.1)
       onceover (>= 3.2.0)
 
 GIT
   remote: https://github.com/dylanratcliffe/onceover.git
-  revision: 0c9d7d07cf7e7a8bcf4bf97ffb02b7a3bf0c1346
+  revision: ef70b9a76e72ad62ddeb1c1f5f0214d43bb69122
   branch: improve_plugin_support
   specs:
     onceover (3.2.0)
