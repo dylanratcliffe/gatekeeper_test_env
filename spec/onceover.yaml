@@ -30,8 +30,16 @@ class_groups:
 node_groups:
 
 test_matrix:
-  - all_nodes:
-      classes: 'all_classes'
+        #  - all_nodes:
+        #      classes: 'all_classes'
+        #      tests: 'spec'
+        #      static_classes:
+        #        - 'profile::base'
+  - CentOS-6.6-32:
+      classes: 'role::webserver'
       tests: 'spec'
       static_classes:
         - 'profile::base'
+  - CentOS-7.0-64:
+      classes: 'role::webserver'
+      tests: 'spec'
